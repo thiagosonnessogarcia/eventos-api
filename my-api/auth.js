@@ -7,8 +7,8 @@ var cfg = require("./config.js")
 var ExtractJwt = passportJWT.ExtractJwt
 var Strategy = passportJWT.Strategy
 var params = {
-  secretOrKey: cfg.jwtSecret, // chave secreta JWT
-  jwtFromRequest: ExtractJwt.fromAuthHeader() // define para onde os dados serão enviados (TOKEN)
+  secretOrKey: cfg.jwtSecret,
+  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
 }
 
 module.exports = function() {
