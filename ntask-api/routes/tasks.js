@@ -4,6 +4,7 @@ module.exports = app => {
     // Middleware para pré execução das routes
     app.route("/tasks")
             // tasks = linha de tarefas
+        .all(app.auth.authenticate())
         .get((req, res) => {
             Tasks.findAll({})
                 .then(result => res.json(result))
@@ -24,6 +25,7 @@ module.exports = app => {
         // Middleware para pré execução das routes
     app.route("/tasks/:id")
             // tasks/1 consulta uma tarefa
+        .all(app.auth.authenticate())
         .get((req, res) => {
             Tasks.findOne({where: req.params})
                 .then(result => {
