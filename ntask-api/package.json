@@ -4,7 +4,8 @@
   "description": "API de gestão de tarefas",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js"
+    "start": "babel-node index.js",
+    "test": "NODE_ENV=test mocha test/**/*.js"
   },
   "author": "thiago",
   "license": "ISC",
