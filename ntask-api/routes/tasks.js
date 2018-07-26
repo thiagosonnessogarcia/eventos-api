@@ -6,7 +6,9 @@ module.exports = app => {
             // tasks = linha de tarefas
         .all(app.auth.authenticate())
         .get((req, res) => {
-            Tasks.findAll({})
+            Tasks.findAll({
+                where: { user_id: req.user.id }
+            })
                 .then(result => res.json(result))
                 .catch(e => {
                     res.status(412).json({msg: e.message()});
@@ -14,6 +16,7 @@ module.exports = app => {
         })
             // tasks = cadastra uma nova tarefa
         .post((req, res) => {
+            req.body.user_id = req.user.id;
             Tasks.create(req.body)
                 .then(result => res.json(result))
                 .catch(e => {
@@ -27,32 +30,40 @@ module.exports = app => {
             // tasks/1 consulta uma tarefa
         .all(app.auth.authenticate())
         .get((req, res) => {
-            Tasks.findOne({where: req.params})
+            Tasks.findOne({where: {
+                id: req.params.id,
+                user_id: req.user.id
+            }})
                 .then(result => {
                     if (result) {
-                        res.json(result);
-                    } else {
-                        res.send(result);
-                    }
+                        return res.json(result);
+                    } 
+                    return res.sendStatus(404);
                 })
                 .catch(e => {
-                    res.status(412).json({msg: e.message()});
+                    res.status(412).json({msg: e.message});
                 });
         })
             // tasks/1 atualiza uma tarefa
         .put((req, res) => {
-            Tasks.update(req.body, {where: req.params})
+            Tasks.update(req.body, {where: {
+                id: req.params.id,
+                user_id: req.user.id
+            }})
                 .then(result => res.sendStatus(204))
                 .catch(e => {
-                    res.status(412).json({msg: e.message()});
+                    res.status(412).json({msg: e.message});
                 });
         })
             // tasks/1 exclui uma tarefa
         .delete((req, res) => {
-            Tasks.destroy({where: req.params})
+            Tasks.destroy({where: {
+                id: req.params.id,
+                user_id: req.user.id
+            }})
                 .then(result => res.sendStatus(204))
                 .catch(e => {
-                    res.status(412).json({msg: e.message()});
+                    res.status(412).json({msg: e.message});
                 });
         });
 }
