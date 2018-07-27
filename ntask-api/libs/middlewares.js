@@ -1,6 +1,7 @@
 // Código para evitar duplicidade e centraliza o middleware no global express
 
 import bodyParser from "body-parser";
+import express from "express";
 module.exports = app => {
     app.set("port", 3000);
     app.set("json spaces", 4);
@@ -10,4 +11,5 @@ module.exports = app => {
         delete req.body.id;
         next();
     });
+    app.use(express.static("public"));
 };
