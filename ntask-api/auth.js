@@ -1,10 +1,11 @@
 import passport from "passport";
-import {Strategy} from "passport-jwt";
+import {Strategy, ExtractJwt} from "passport-jwt";
 
 module.exports = app => {
     const Users = app.db.models.Users;
     const cfg = app.libs.config;
-    const strategy = new Strategy({secretOrKey: cfg.jwtSecret},
+
+    const strategy = new Strategy({secretOrKey: cfg.jwtSecret, jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()},
         (payload, done) => {
             Users.findById(payload.id)
                 .then(user => {
@@ -19,6 +20,7 @@ module.exports = app => {
                 .catch(e => done(e, null));
         });
     passport.use(strategy);
+
     return {
         initialize: () => {
             return passport.initialize();
