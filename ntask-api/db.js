@@ -24,9 +24,9 @@ module.exports = app => {
             const model = sequelize.import(modelDir);
             db.models[model.name] = model;
         });
-        Object.keys(db.models).forEach(key => {
-            db.models[key].associate(db.models); // garantia de associação correta
-        });
+        // garantia de associação correta
+        Object.keys(db.models).forEach(key =>{ if (db.models[key].hasOwnProperty('associate')){ db.models[key].associate(db.models); } 
+    }); 
     }
     return db;
 };
