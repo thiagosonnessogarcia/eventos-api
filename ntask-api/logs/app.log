@@ -67,3 +67,41 @@
 {"message":"[Fri Jul 27 2018 18:05:09 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
 {"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:05:09 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
 {"message":"[Fri Jul 27 2018 18:05:09 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:12:59 GMT-0300 (Hora oficial do Brasil)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT 0, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:12:59 +0000] \"GET / HTTP/1.1\" 200 29\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:12:59 GMT-0300 (Hora oficial do Brasil)] Executing (default): PRAGMA INDEX_LIST(`Tasks`)","level":"info"}
+{"message":"[Fri Jul 27 2018 18:12:59 GMT-0300 (Hora oficial do Brasil)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL);","level":"info"}
+{"message":"[Fri Jul 27 2018 18:12:59 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:12:59 GMT-0300 (Hora oficial do Brasil)] Executing (default): PRAGMA INDEX_LIST(`Users`)","level":"info"}
+{"message":"[Fri Jul 27 2018 18:12:59 GMT-0300 (Hora oficial do Brasil)] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:01 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:01 GMT-0300 (Hora oficial do Brasil)] Executing (default): SELECT `id`, `name`, `email`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = '123456';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:13:01 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:01 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:01 GMT-0300 (Hora oficial do Brasil)] Executing (default): SELECT `id`, `name`, `email`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'SENHA_ERRADA';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:13:02 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:02 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:02 GMT-0300 (Hora oficial do Brasil)] Executing (default): SELECT `id`, `name`, `email`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'SENHA_ERRADA';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:13:02 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:02 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:13:02 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:02 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:56 GMT-0300 (Hora oficial do Brasil)] Executing (default): CREATE TABLE IF NOT EXISTS `Tasks` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `title` VARCHAR(255) NOT NULL, `done` TINYINT(1) NOT NULL DEFAULT 0, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL);","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:13:56 +0000] \"GET / HTTP/1.1\" 200 29\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:56 GMT-0300 (Hora oficial do Brasil)] Executing (default): PRAGMA INDEX_LIST(`Tasks`)","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:56 GMT-0300 (Hora oficial do Brasil)] Executing (default): CREATE TABLE IF NOT EXISTS `Users` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` VARCHAR(255) NOT NULL, `email` VARCHAR(255) NOT NULL UNIQUE, `created_at` DATETIME NOT NULL, `updated_at` DATETIME NOT NULL);","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:56 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:56 GMT-0300 (Hora oficial do Brasil)] Executing (default): PRAGMA INDEX_LIST(`Users`)","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:56 GMT-0300 (Hora oficial do Brasil)] Executing (default): PRAGMA INDEX_INFO(`sqlite_autoindex_Users_1`)","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:58 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:58 GMT-0300 (Hora oficial do Brasil)] Executing (default): SELECT `id`, `name`, `email`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = '123456';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:13:58 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:58 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:58 GMT-0300 (Hora oficial do Brasil)] Executing (default): SELECT `id`, `name`, `email`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'SENHA_ERRADA';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:13:58 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:58 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:58 GMT-0300 (Hora oficial do Brasil)] Executing (default): SELECT `id`, `name`, `email`, `created_at`, `updated_at` FROM `Users` AS `Users` WHERE `Users`.`email` = 'SENHA_ERRADA';","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:13:59 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:59 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [27/Jul/2018:21:13:59 +0000] \"POST /token HTTP/1.1\" 401 12\n","level":"info"}
+{"message":"[Fri Jul 27 2018 18:13:59 GMT-0300 (Hora oficial do Brasil)] Executing (default): DELETE FROM `Users`","level":"info"}
