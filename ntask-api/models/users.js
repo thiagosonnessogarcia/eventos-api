@@ -29,10 +29,10 @@ module.exports = (sequelize, DataType) => {
                 notEmpty: true
             }
         },
+    }, {
         hooks: {
             beforeCreate: user => {
                 const salt = bcrypt.genSaltSync();
-                console.log(user)
                 user.password = bcrypt.hashSync(user.password, salt);
             }
         },
