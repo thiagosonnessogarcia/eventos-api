@@ -5,7 +5,7 @@ describe("Routes: Tasks", () => {
     const jwtSecret = app.libs.config.jwtSecret;
     let token;
     let fakeTask;
-    befoteEach(done => {
+    beforeEach(done => {
         Users
             .destroy({ where: {} })
             .then(() => Users.create({

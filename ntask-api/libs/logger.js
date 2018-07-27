@@ -3,7 +3,7 @@ import winston from "winston";
 if (!fs.existsSync("logs")) {
     fs.mkdirSync("logs");
 }
-module.exports = new winston.Logger(
+module.exports = winston.createLogger(
     {
         transports: [
             new winston.transports.File({
