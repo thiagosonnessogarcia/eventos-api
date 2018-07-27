@@ -25,14 +25,14 @@ module.exports = (sequelize, DataType) => {
             type: DataType.STRING,
             unique: true, // só permite uma senha
             allowNull: false,
-            validate {
+            validate: {
                 notEmpty: true
             }
         },
-    }, {
         hooks: {
             beforeCreate: user => {
                 const salt = bcrypt.genSaltSync();
+                console.log(user)
                 user.password = bcrypt.hashSync(user.password, salt);
             }
         },
