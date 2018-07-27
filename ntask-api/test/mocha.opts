@@ -1,4 +1,7 @@
---require test/helpers 
---reporter spec 
---compilers js:babel/register 
+# mocha.opts
+
+--require test/helpers
+--reporter spec
+--require babel-core/register
+--compilers js:babel-register
 --slow 5000

@@ -56,6 +56,67 @@ define({ "api": [
     "name": "Get"
   },
   {
+    "type": "delete",
+    "url": "/tasks/:id",
+    "title": "Exclui uma tarefa",
+    "group": "Tarefas",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>Token de usuário</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Header ",
+          "content": "{\"Authorization\": \"JWT xyz.abc.123.hgf\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "id",
+            "optional": false,
+            "field": "id",
+            "description": "<p>Id da tarefa</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Sucesso ",
+          "content": "HTTP/1.1 204 No Content",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Erro de consulta ",
+          "content": "HTTP/1.1 412 Precondition Failed",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "routes/tasks.js",
+    "groupTitle": "Tarefas",
+    "name": "DeleteTasksId"
+  },
+  {
     "type": "get",
     "url": "/tasks",
     "title": "Lista tarefas",
