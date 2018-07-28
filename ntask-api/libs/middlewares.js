@@ -1,10 +1,12 @@
 // Código para evitar duplicidade e centraliza o middleware no global express
+// middleware (funçao para verificar entradas e saidas)
 
 import bodyParser from "body-parser";
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
 import compression from "compression";
+import helmet from "helmet";
 import logger from "./logger.js";
 
 module.exports = app => {
@@ -17,6 +19,7 @@ module.exports = app => {
             }
         }
     }));
+    app.user(helmet());
     app.use(cors({
         origin: ["http://localhost:3001"],
         methods: ["GET", "POST", "PUT", "DELETE"],
