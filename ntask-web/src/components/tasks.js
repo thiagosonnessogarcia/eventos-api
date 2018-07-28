@@ -58,6 +58,7 @@ class Tasks extends NTask {
                 });
             }
         }
+    }
         taskRemoveClick() {
             const removes = this.body.querySelectorAll("[data-remove]");
             for (let i = 0, max =remove.length; i < max; i++) {
@@ -84,5 +85,4 @@ class Tasks extends NTask {
             }
         }
     }
-}
 module.exports = Tasks;
