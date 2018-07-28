@@ -12,6 +12,7 @@
   },
   "author": "thiago",
   "dependencies": {
+    "babel-core": "^6.26.3",
     "babelify": "^8.0.0",
     "browser-request": "^0.3.3",
     "browserify": "^16.2.2",
