@@ -23,7 +23,7 @@ module.exports = (sequelize, DataType) => {
         },
         password: {
             type: DataType.STRING,
-            unique: true, // só permite uma senha
+            unique: true, // só permite uma senha, não sendo válido senhas iguais
             allowNull: false,
             validate: {
                 notEmpty: true
