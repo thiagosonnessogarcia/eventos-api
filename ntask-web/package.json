@@ -4,10 +4,13 @@
   "description": "Versão WEB do gerenciado de tarefas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && npm run server",
+    "server": "http-server public -p 3001",
+    "build": "npm run browserify && npm run uglify",
+    "browserify": "browserify src -t babelify -o public/js/app.js",
+    "uglify": "uglify -s public/js/app.js"
   },
   "author": "thiago",
-  "license": "ISC",
   "dependencies": {
     "babelify": "^8.0.0",
     "browser-request": "^0.3.3",
