@@ -30,7 +30,7 @@ describe("Routes: Tasks", () => {
     });
     describe("GET /tasks", () => {
         describe("status 200", () => {
-            it("retuns a list of tasks", done => {
+            it("returns a list of tasks", done => {
                 request.get("/tasks")
                     .set("Authorization", `JWT ${token}`)
                     .expect(200)
